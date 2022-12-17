@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculator</title>
+</head>
+<body>
+<div class="container">
+    <div class="myCal">
+        <div class="shape"></div>
+        <div id="myinput-result">
+            <input id="myinput" type="text">
+        </div>
+        <div class="row">
+            <div class="mystylebtn mycolor" id="AC">AC</div>
+            <div class="mystylebtn mycolor">+/-</div>
+            <div class="mystylebtn mycolor">%</div>
+            <div class="mystylebtn" id="taghsim">/</div>
+        </div>
+        <div class="row">
+            <div class="mystylebtn" id="7">7</div>
+            <div class="mystylebtn" id="8">8</div>
+            <div class="mystylebtn" id="9">9</div>
+            <div class="mystylebtn" id="zarb">*</div>
+        </div>
+        <div class="row">
+            <div class="mystylebtn" id="4">4</div>
+            <div class="mystylebtn" id="5">5</div>
+            <div class="mystylebtn" id="6">6</div>
+            <div class="mystylebtn" id="menha">-</div>
+        </div>
+        <div class="row">
+            <div class="mystylebtn" id="1">1</div>
+            <div class="mystylebtn" id="2">2</div>
+            <div class="mystylebtn" id="3">3</div>
+            <div class="mystylebtn" id="jame">+</div>
+        </div>
+        <div class="row">
+            <div class="mystylebtn " id="0">0</div>
+            <div class="mystylebtn" id="dat">.</div>
+            <div class="mystylebtn" id="mosavi">=</div>
+        </div>
+    </div>
+</div>
+<script>
+    var AC = document.getElementById("AC");
+    var taghsim = document.getElementById("taghsim");
+    var zarb = document.getElementById("zarb");
+    var menha = document.getElementById("menha");
+    var jame = document.getElementById("jame");
+    var yek = document.getElementById("1");
+    var doe = document.getElementById("2");
+    var se = document.getElementById("3");
+    var char = document.getElementById("4");
+    var pang = document.getElementById("5");
+    var shish = document.getElementById("6");
+    var haft = document.getElementById("7");
+    var hasht = document.getElementById("8");
+    var noh = document.getElementById("9");
+    var sefer = document.getElementById("0");
+    var mosavi = document.getElementById("mosavi");
+    var dat = document.getElementById("dat");
+    var myinput = document.getElementById("myinput");
+    var x1, x2, x3,result;
+    yek.onclick = function () {
+        myinput.value += 1;
+    }
+    doe.onclick = function () {
+        myinput.value += 2;
+    }
+    se.onclick = function () {
+        myinput.value += 3;
+    }
+    char.onclick = function () {
+        myinput.value += 4;
+    }
+    pang.onclick = function () {
+        myinput.value += 5;
+    }
+    shish.onclick = function () {
+        myinput.value += 6;
+    }
+    haft.onclick = function () {
+        myinput.value += 7;
+    }
+    hasht.onclick = function () {
+        myinput.value += 8;
+    }
+    noh.onclick = function () {
+        myinput.value += 9;
+    }
+    sefer.onclick = function () {
+        myinput.value += 0;
+    }
+    dat.onclick = function () {
+        myinput.value = ".";
+    }
+    jame.onclick = function () {
+        result = "+";
+        x1 = parseFloat(myinput.value);
+        myinput.value = "";
+    }
+    menha.onclick = function () {
+        result = "-";
+        x1 = parseFloat(myinput.value);
+        myinput.value = "";
+    }
+    zarb.onclick = function () {
+        result = "*";
+        x1 = parseFloat(myinput.value);
+        myinput.value = "";
+    }
+    taghsim.onclick = function () {
+        result = "/";
+        x1 = parseFloat(myinput.value);
+        myinput.value = "";
+    }
+    mosavi.onclick = function () {
+        x2 = parseFloat(myinput.value);
+        if (result == "+") {
+             x3 = x1 + x2;
+        }
+        else if (result == "-") {
+            x3 = x1 - x2;
+        }
+        else if (result == "*") {
+            x3 = x1 * x2;
+        }
+        else if (result == "/") {
+            x3 = x1 / x2;
+        }
+
+        myinput.value = x3;
+    }
+    AC.onclick = function () {
+        myinput.value = "";
+    }
+</script>
+</body>
+</html>

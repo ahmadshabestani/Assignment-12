@@ -1,0 +1,74 @@
+body{
+    background-color: #eeeeee;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+}
+.myCal{
+    margin: 40px auto 0;
+    width: 50%;
+    height: 500px;
+    background-color: lightgray;
+    position: relative;
+}
+.shape{
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    position: absolute;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+}
+input{
+    border: none !important;
+}
+#myinput-result{
+    width: 100%;
+    margin-left: 5px;
+    border: none !important;
+}
+
+#myinput-result input{
+    border: none !important;
+    height: 70px;
+    width: 96%;
+    left: -3px;
+    margin: 0 auto;
+    position: relative;
+    top: 90px;
+    direction: rtl;
+    background-color: transparent;
+}
+.row{
+    width: 90%;
+    top: 100px;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+}
+.mystylebtn{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: inset -5px -5px 27px #b1b1b1,
+    inset 5px 5px 27px #ffffff;
+}
+div{
+    color: black;
+}
+#taghsim,#zarb,#menha,#jame,#mosavi{
+    color: orange;
+}
+.mycolor{
+    opacity: 0.5;
+}
+
